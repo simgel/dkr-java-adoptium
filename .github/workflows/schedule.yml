@@ -1,0 +1,22 @@
+name: Scheduled check
+permissions:
+  packages: write
+  contents: read
+
+on:
+  schedule:
+    - cron:  '15 2 * * *'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: ./.github/scripts/build.sh schedule 17
+        shell: bash
+        env: 
+          SCR_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}

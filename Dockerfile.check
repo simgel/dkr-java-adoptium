@@ -1,0 +1,4 @@
+ARG TAG=17
+FROM ghcr.io/simgel/dkr-java-adoptium:${TAG}
+COPY check.sh .
+CMD [ "./check.sh" ]

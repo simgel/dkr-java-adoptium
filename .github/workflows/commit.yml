@@ -1,0 +1,22 @@
+name: Update on Commit
+permissions:
+  packages: write
+  contents: read
+
+on:
+  push:
+    branches: [ "master" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: ./.github/scripts/build.sh full 17
+        shell: bash
+        env: 
+          SCR_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
