@@ -10,4 +10,6 @@ RUN apt update -qq \
     && apt update -qq \
     && apt install -qqy temurin-${JAVA}-jdk \
     && rm -rf /var/cache/apt/* \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir -p chroot-bullseye/opt/dkr-image/simgel/ \
+    && hexdump -n 32 -e '4/4 "%8x"' /dev/urandom > chroot-bullseye/opt/dkr-image/simgel/dkr-java-adoptium.id
