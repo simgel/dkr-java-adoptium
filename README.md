@@ -1,7 +1,7 @@
 Java (Adoptium) Docker Image
 ============================
 
-Minimal Java Adoptium Image
+Basic Java Adoptium Image
 
 
 **Usage:**
