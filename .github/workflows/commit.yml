@@ -10,13 +10,23 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build_v17:
     runs-on: ubuntu-latest
     
     steps:
       - uses: actions/checkout@v3
       - name: Build
         run: ./.github/scripts/build.sh full 17
+        shell: bash
+        env: 
+          SCR_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  build_v20:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: ./.github/scripts/build.sh full 20
         shell: bash
         env: 
           SCR_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
