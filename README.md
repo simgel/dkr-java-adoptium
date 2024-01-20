@@ -15,7 +15,7 @@ FROM ghcr.io/simgel/dkr-java-adoptium:17
 
 **Java 21**
 ```Dockerfile
-FROM ghcr.io/simgel/dkr-java-adoptium:17
+FROM ghcr.io/simgel/dkr-java-adoptium:21
 ```
 
 
