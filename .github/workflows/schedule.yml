@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Build
-        run: ./.github/scripts/build.sh schedule 20
+        run: ./.github/scripts/build.sh schedule 21
         shell: bash
         env: 
           SCR_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}

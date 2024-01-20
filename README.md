@@ -8,6 +8,12 @@ Java Adoptium JDK Image with nightly updates. Full JDK with a total image size o
 
 ## Usage
 
+**Java 17**
+```Dockerfile
+FROM ghcr.io/simgel/dkr-java-adoptium:17
+```
+
+**Java 21**
 ```Dockerfile
 FROM ghcr.io/simgel/dkr-java-adoptium:17
 ```
@@ -18,7 +24,7 @@ FROM ghcr.io/simgel/dkr-java-adoptium:17
 Based on a minimal debian base image.
 
 ```Dockerfile
-FROM ghcr.io/simgel/dkr-debian-base:bullseye
+FROM ghcr.io/simgel/dkr-debian-base:bookworm
 ````
 
 

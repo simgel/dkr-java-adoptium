@@ -20,13 +20,13 @@ jobs:
         shell: bash
         env: 
           SCR_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  build_v20:
+  build_v21:
     runs-on: ubuntu-latest
     
     steps:
       - uses: actions/checkout@v3
       - name: Build
-        run: ./.github/scripts/build.sh full 20
+        run: ./.github/scripts/build.sh full 21
         shell: bash
         env: 
           SCR_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
