@@ -70,6 +70,8 @@ if [[ "$1" == "schedule" ]]; then
         echo ">> no update required"
         exit 0
     else
+        echo "base image id: $BASEID"
+        echo "java image id: $IMGID"
         echo "updates found ($ucount):"
         echo "$pks"
     fi
