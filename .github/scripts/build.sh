@@ -29,7 +29,7 @@ trap cleanup EXIT
 # BUILD --------------
 echo "build for java version $2"
 IMAGE="ghcr.io/simgel/dkr-java-adoptium:$2"
-BASEI="ghcr.io/simgel/dkr-debian-base:bullseye"
+BASEI="ghcr.io/simgel/dkr-debian-base:bookworm"
 
 ( echo "${SCR_GIT_TOKEN}" | docker login -u ${GITHUB_ACTOR} --password-stdin ghcr.io ) || exit 1
 
